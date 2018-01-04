@@ -13,7 +13,7 @@ module MillerRabin where
 import GHC.TypeLits
 import Data.Proxy(Proxy(..))
 import Control.Arrow
-import System.Random -- for now
+import System.Random
 
 newtype Mod i (n :: Nat) = Mod i
   deriving (Eq, Ord, Show)
