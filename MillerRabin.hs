@@ -54,7 +54,7 @@ millerRabin n p =  do  gen <- getStdGen
                        case someNat of
                          SomeNat (_ :: Proxy p) -> do
                                let aMod :: Mod Integer p
-                                   aMod = toMod p
+                                   aMod = toMod a
                                let b1 = millerRabinCheck aMod
                                bRest <- millerRabin (n-1) p
                                return (b1 && bRest)
